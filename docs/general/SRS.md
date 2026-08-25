@@ -41,6 +41,7 @@ Behaviour:
 2. The text shown on the page comes from data stored by the system, not from frontend source.
 3. The displayed text matches the stored greeting value exactly when the page loads.
 4. The page remains visually plain: black text, white background, no animation, no extra content.
+5. The backend API returns greeting text only, as JSON: `{ "greeting": "Hello Word" }`.
 
 **Acceptance criteria** — each maps one-to-one onto a test case in `docs/general/test-cases/show-stored-greeting-page.md`.
 
@@ -70,10 +71,6 @@ Behaviour:
 - **Depends on:** backend API, for reading greeting text.
 - **Depends on:** PostgreSQL, for storing one greeting row.
 - **Assumption:** the stored greeting row exists before page load. If it does not, the project cannot show the greeting without adding a new empty-state decision.
-
-| Open question | Proposed default | Who decides |
-|---|---|---|
-| Should the API return anything beyond the greeting text? | No, only the greeting text needed for this page | Stakeholder / TL |
 
 ## 5. Screens
 
